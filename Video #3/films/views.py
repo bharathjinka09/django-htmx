@@ -33,7 +33,7 @@ class FilmList(ListView):
 
     def get_queryset(self):
         user = self.request.user
-        return user.films.all()
+        return user.films.all()[::-1]
 
 
 def check_username(request):
@@ -53,5 +53,5 @@ def add_film(request):
     request.user.films.add(film)
 
     # return template fragment with all the user's films
-    films = request.user.films.all()
+    films = request.user.films.all()[::-1]
     return render(request, 'partials/film-list.html', {'films': films})
