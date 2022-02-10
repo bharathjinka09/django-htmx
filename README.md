@@ -1,0 +1,2 @@
+# Django with HTMX integration
+
