@@ -1,1 +1,2 @@
-# django-htmx
+# Django with HTMX integration
+
